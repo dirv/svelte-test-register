@@ -1,0 +1,27 @@
+{
+  "name": "svelte-3-register",
+  "version": "0.1.0",
+  "description": "Compile imported Svelte 3 components on Node (e.g. for test runners like Mocha and Jasmine)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirv/svelte-test-register.git"
+  },
+  "keywords": [
+    "svelte"
+  ],
+  "author": "Daniel Irvine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dirv/svelte-test-register/issues"
+  },
+  "homepage": "https://github.com/dirv/svelte-test-register#readme",
+  "dependencies": {
+    "pirates": "^4.0.1",
+    "source-map-support": "^0.5.16",
+    "svelte": "^3.15.0"
+  }
+}
