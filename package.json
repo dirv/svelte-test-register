@@ -1,11 +1,8 @@
 {
-  "name": "svelte-3-register",
+  "name": "svelte-test-register",
   "version": "0.1.0",
   "description": "Compile imported Svelte 3 components on Node (e.g. for test runners like Mocha and Jasmine)",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dirv/svelte-test-register.git"
