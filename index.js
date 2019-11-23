@@ -1,13 +1,8 @@
 const fs = require('fs');
 const svelte = require('svelte/compiler');
-const addHook = require('pirates').addHook;
 const sourceMapSupport = require('source-map-support');
 
-function matcher(filename) {
-  return true;
-}
-
-function convertSvelte(_, filename) {
+function convertSvelte(module, filename) {
   const code = fs.readFileSync(filename, "utf-8");
   const result = svelte.compile(code, {
     filename,
@@ -32,8 +27,7 @@ function convertSvelte(_, filename) {
 
   const esInterop = 'Object.defineProperty(exports, "__esModule", { value: true });';
 
-  return result.js.code + esInterop;
+  return module._compile(result.js.code + esInterop, filename);
 }
 
-addHook(convertSvelte, { exts: ['.svelte'], matcher });
-
+require.extensions['.svelte'] = convertSvelte;
